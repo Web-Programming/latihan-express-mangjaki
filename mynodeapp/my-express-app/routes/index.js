@@ -10,4 +10,7 @@ router.get('/about',function(req,res,next){
   res.render('about', {title: 'Amoung us'});
 });
 
+router.get('/contact',function(req,res,next){
+  res.render('contact', {title: 'My Contact'});
+});
 module.exports = router;
