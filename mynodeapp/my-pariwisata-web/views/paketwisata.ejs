@@ -1,0 +1,78 @@
+<%- include("master", {
+  title: title,
+  body: `
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .paket {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .paket h2 {
+            color: #007BFF;
+        }
+        .harga {
+            font-size: 1.5em;
+            color: #28a745;
+        }
+        .deskripsi {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+<div class="container">
+    <h1>Paket Wisata</h1>
+
+    <div class="paket">
+        <h2>Paket Wisata Bali</h2>
+        <p class="harga">Rp 3.500.000</p>
+        <p class="deskripsi">Nikmati keindahan Bali dengan paket wisata selama 3 hari 2 malam, termasuk akomodasi, transportasi, dan tour ke tempat-tempat wisata terkenal.</p>
+        <a href="#" class="btn">Pesan Sekarang</a>
+    </div>
+
+    <div class="paket">
+        <h2>Paket Wisata Yogyakarta</h2>
+        <p class="harga">Rp 2.200.000</p>
+        <p class="deskripsi">Jelajahi kekayaan budaya dan sejarah Yogyakarta selama 2 hari 1 malam. Sudah termasuk penginapan dan tour ke Candi Borobudur dan Prambanan.</p>
+        <a href="#" class="btn">Pesan Sekarang</a>
+    </div>
+
+    <div class="paket">
+        <h2>Paket Wisata Komodo</h2>
+        <p class="harga">Rp 5.000.000</p>
+        <p class="deskripsi">Petualangan seru ke Pulau Komodo selama 4 hari 3 malam. Termasuk akomodasi, makan, dan tour untuk melihat komodo dan snorkeling di pantai yang indah.</p>
+        <a href="#" class="btn">Pesan Sekarang</a>
+    </div>
+</div>
+`
+})
+%>
