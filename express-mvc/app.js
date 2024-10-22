@@ -8,6 +8,7 @@ require('./app_server/models/db');
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
+var mahasiswaRouter = require('./app_server/routes/mahasiswa');
 
 var app = express();
 
