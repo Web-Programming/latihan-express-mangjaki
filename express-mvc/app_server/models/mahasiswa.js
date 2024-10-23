@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-const schemaMahasiswa = new mongoose.Schema({ 
+let schemaMhs = new mongoose.Schema({ 
     nama : String,
     npm : {
         type: String,
@@ -16,4 +16,4 @@ const schemaMahasiswa = new mongoose.Schema({
     aktif : Boolean,
  });
 
-mongoose.model('Mahasiswa', schemaMahasiswa);
+mongoose.model('Mahasiswa', schemaMhs);
