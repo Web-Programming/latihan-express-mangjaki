@@ -9,6 +9,8 @@ require('./app_server/models/db');
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var mahasiswaRouter = require('./app_server/routes/mahasiswa');
+var housingRouter = require('./app_server/routes/housing');
+const { create } = require('./app_server/models/housing');
 
 var app = express();
 
@@ -23,10 +25,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req,res,next)=>{
+  res.setHeader("Access-Control-Allow-Origin","*");
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/mahasiswa',mahasiswaRouter);
+app.use('/housing', housingRouter);
 
+// app.use(function(req,res,next){
+//   next(createError(404));
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
